@@ -72,23 +72,23 @@ components:
         - $ref: "#/components/schemas/Descriptor"
         - properties: 
             administration: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AdministrativeInformation"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AdministrativeInformation"
             description: 
               type: array
               items:
-                $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/LangString"
+                $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/LangString"
             displayName: 
               type: array
               items:
-                $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/LangString"
+                $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/LangString"
             globalAssetId: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference"
             idShort: 
               type: string
             identification: 
               type: string
             specificAssetIds: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId"
             submodelDescriptors: 
               items: 
                 $ref: "#/components/schemas/SubmodelDescriptor"
@@ -100,23 +100,23 @@ components:
       example: '{ "identification": "https://example.org/aas/motor", "endpoints": [ { "protocolInformation": { "endpointAddress": "https://localhost:1234", "endpointProtocolVersion": "1.1" }, "interface": "AAS-1.0" }, { "protocolInformation": { "endpointAddress": "opc.tcp://localhost:4840" }, "interface": "AAS-1.0" }, { "protocolInformation": { "endpointAddress": "https://localhost:5678", "endpointProtocolVersion": "1.1", "subprotocol": "OPC UA Basic SOAP", "subprotocolBody": "ns=2;s=MyAAS", "subprotocolBodyEncoding": "application/soap+xml" }, "interface": "AAS-1.0" } ] }'
     AssetAdministrationShellMetadata: 
       allOf: 
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Identifiable"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasDataSpecification"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Identifiable"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasDataSpecification"
         - properties: 
             derivedFrom: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference"
     BasicEventElementMetadata: 
       allOf: 
         - $ref: "#/components/schemas/SubmodelElementAttributes"
         - properties: 
             direction: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Direction"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Direction"
             state: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/StateOfEvent"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/StateOfEvent"
             messageTopic: 
               type: string
             messageBroker: 
-              $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference"
+              $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference"
             lastUpdate: 
               type: string
             minInterval: 
@@ -161,7 +161,7 @@ components:
     EntityValue: 
       properties: 
         entityType: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/EntityType"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/EntityType"
         globalAssetId: 
           $ref: "#/components/schemas/ReferenceValue"
         specificAssetIds:
@@ -240,11 +240,11 @@ components:
       properties: 
         inoutputArguments: 
           items: 
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/OperationVariable"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/OperationVariable"
           type: array
         inputArguments: 
           items: 
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/OperationVariable"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/OperationVariable"
           type: array
         requestId: 
           type: string
@@ -270,11 +270,11 @@ components:
           $ref: "#/components/schemas/ExecutionState"
         inoutputArguments: 
           items: 
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/OperationVariable"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/OperationVariable"
           type: array
         outputArguments: 
           items: 
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/OperationVariable"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/OperationVariable"
           type: array
         requestId: 
           type: string
@@ -306,7 +306,7 @@ components:
         - $ref: "#/components/schemas/SubmodelElementAttributes"
       properties: 
         valueType: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/DataTypeDefXsd"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/DataTypeDefXsd"
     PropertyValue: 
       oneOf: 
         - $ref: "#/components/schemas/StringValue"
@@ -334,7 +334,7 @@ components:
         - $ref: "#/components/schemas/SubmodelElementAttributes"
       properties: 
         valueType: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/DataTypeDefXsd"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/DataTypeDefXsd"
     RangeValue: 
       properties: 
         max: 
@@ -354,11 +354,11 @@ components:
       type: object
       properties:
         type: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ReferenceTypes"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ReferenceTypes"
         keys:
           type: array
           items:
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Key"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Key"
     RelationshipElementMetadata: 
       allOf: 
         - $ref: "#/components/schemas/SubmodelElementAttributes"
@@ -388,21 +388,21 @@ components:
         - $ref: "#/components/schemas/Descriptor"
       properties: 
         administration: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AdministrativeInformation"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AdministrativeInformation"
         description: 
           type: array
           items:
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/LangString"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/LangString"
         displayName: 
           type: array
           items:
-            $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/LangString"
+            $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/LangString"
         idShort: 
           type: string
         identification: 
           type: string
         semanticId: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference"
       required: 
         - identification
         - endpoints
@@ -410,11 +410,11 @@ components:
       example: '{ "identification": "https://admin-shell.io/zvei/nameplate/1/0/Nameplate", "endpoints": [ { "protocolInformation": { "endpointAddress": "https://localhost:1234", "endpointProtocolVersion": "1.1" }, "interface": "AAS-1.0" }, { "protocolInformation": { "endpointAddress": "opc.tcp://localhost:4840" }, "interface": "AAS-1.0" }, { "protocolInformation": { "endpointAddress": "https://localhost:5678", "endpointProtocolVersion": "1.1", "subprotocol": "OPC UA Basic SOAP", "subprotocolBody": "ns=2;s=MyAAS", "subprotocolBodyEncoding": "application/soap+xml" }, "interface": "AAS-1.0" } ] }'
     SubmodelElementAttributes: 
       allOf: 
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Referable"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasDataSpecification"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasSemantics"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Qualifiable"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasKind"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Referable"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasDataSpecification"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasSemantics"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Qualifiable"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasKind"
     SubmodelElementListMetadata: 
       allOf: 
         - $ref: "#/components/schemas/SubmodelElementAttributes"
@@ -422,11 +422,11 @@ components:
         orderRelevant:
           type: boolean
         semanticIdListElement: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference"
         typeValueListElement: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ModelType"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ModelType"
         valueTypeListElement: 
-          $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/DataTypeDefXsd"
+          $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/DataTypeDefXsd"
     SubmodelElementListValue:
       type: array
       items:
@@ -470,11 +470,11 @@ components:
         - $ref: "#/components/schemas/SubmodelElementListValue"
     SubmodelMetadata: 
       allOf: 
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Identifiable"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasDataSpecification"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Qualifiable"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasSemantics"
-        - $ref: "https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/HasKind"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Identifiable"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasDataSpecification"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Qualifiable"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasSemantics"
+        - $ref: "https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/HasKind"
     ValueOnly: 
       description: "The ValueOnly serialization of submodel elements (patternProperties and propertyNames will be supported propably with OpenApi 3.1). The full description of the generic JSON validation schema for the ValueOnly-serialization can be found in chapter 9.4.3 in Details of the Asset Administration Shell Part 2.\n"
       type: object

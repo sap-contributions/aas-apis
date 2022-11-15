@@ -49,7 +49,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId'
             example: '[ { "name": "some-asset-id", "value": "http://example-company.com/myAsset", "externalSubjectId": { "keys": [ { "type": "GlobalReference", "value": "http://example-company.com/example-companys-asset-keys" } ], "type": "GlobalReference" } }, { "name": "some-other-asset-id", "value": "12345ABC", "externalSubjectId": { "keys": [ { "type": "GlobalReference", "value": "http://my-own-company.com/keys" } ], "type": "GlobalReference" } } ]e": "globalAssetId","value": "http://example.company/myAsset", "externalSubjectId": "http://example.company"},{"name": "myOwnInternalAssetId","value": "12345ABC", "externalSubjectId": "http://example.company"}]'
         - name: idShort
           in: query
@@ -59,9 +59,9 @@ paths:
           explode: true
           schema:
             type: string
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: Requested Asset Administration Shells
@@ -70,13 +70,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'          
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'          
     post:
       tags:
         - Asset Administration Shell Repository API
@@ -89,7 +89,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         required: true
       responses:
         '201':
@@ -97,19 +97,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'  
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'  
   /shells/{aasIdentifier}:
     get:
       tags:
@@ -128,28 +128,28 @@ paths:
           schema:
             type: string
             format: byte
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: Requested Asset Administration Shell
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'  
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'  
     put:
       tags:
         - Asset Administration Shell Repository API
@@ -172,7 +172,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         required: true
       responses:
         '204':
@@ -182,19 +182,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'  
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'  
     delete:
       tags:
         - Asset Administration Shell Repository API
@@ -220,13 +220,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /aas:
     get:
       tags:
@@ -236,20 +236,20 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/GetAssetAdministrationShell/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
       responses:
         '200':
           description: Requested Asset Administration Shell
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Asset Administration Shell API
@@ -258,13 +258,13 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/PutAssetAdministrationShell/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
       requestBody:
         description: Asset Administration Shell object
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetAdministrationShell'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShell'
         required: true
       responses:
         '204':
@@ -274,13 +274,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
   /aas/asset-information:
     get:
       tags:
@@ -295,13 +295,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetInformation'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetInformation'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Asset Administration Shell API
@@ -314,7 +314,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/AssetInformation'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/AssetInformation'
         required: true
       responses:
         '204':
@@ -324,13 +324,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
   /aas/submodels:
     get:
       tags:
@@ -347,13 +347,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Asset Administration Shell API
@@ -366,7 +366,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference'
         required: true
       responses:
         '201':
@@ -374,19 +374,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Reference'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Reference'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /aas/submodels/{submodelIdentifier}:
     delete:
       tags:
@@ -413,13 +413,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodels:
     get:
       tags:
@@ -431,7 +431,7 @@ paths:
         - https://admin-shell.io/aas/API/GetAllSubmodelsBySemanticId/1/0/RC03
         - https://admin-shell.io/aas/API/GetAllSubmodelsByIdShort/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/SemanticId'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/SemanticId'
         - name: idShort
           in: query
           description: The Submodel’s idShort
@@ -440,9 +440,9 @@ paths:
           explode: true
           schema:
             type: string
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: Requested Submodels
@@ -451,13 +451,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Submodel Repository API
@@ -470,7 +470,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         required: true
       responses:
         '201':
@@ -478,19 +478,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodels/{submodelIdentifier}:
     get:
       tags:
@@ -509,28 +509,28 @@ paths:
           schema:
             type: string
             format: byte
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: Requested Submodel
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Submodel Repository API
@@ -553,7 +553,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         required: true
       responses:
         '204':
@@ -563,19 +563,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Submodel Repository API
@@ -601,13 +601,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel:
     get:
       tags:
@@ -617,22 +617,22 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/GetSubmodel/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: Requested Submodel
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Submodel API
@@ -641,15 +641,15 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/PutSubmodel/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       requestBody:
         description: Submodel object
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Submodel'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Submodel'
         required: true
       responses:
         '204':
@@ -659,13 +659,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
   /submodel/submodel-elements:
     get:
       tags:
@@ -677,9 +677,9 @@ paths:
         - https://admin-shell.io/aas/API/GetAllSubmodelElementsBySemanticId/1/0/RC03
         - https://admin-shell.io/aas/API/GetAllSubmodelElementsByParentPathAndSemanticId/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       responses:
         '200':
           description: List of found submodel elements
@@ -688,13 +688,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Submodel API
@@ -703,15 +703,15 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/PostSubmodelElement/1/0/RC03c
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
       requestBody:
         description: Requested submodel element
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         required: true
       responses:
         '201':
@@ -719,19 +719,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel/submodel-elements/{idShortPath}:
     get:
       tags:
@@ -742,9 +742,9 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/GetSubmodelElementByPath/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
         - name: idShortPath
           in: path
           description: IdShort path to the submodel element (dot-separated)
@@ -759,19 +759,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Submodel API
@@ -780,9 +780,9 @@ paths:
       x-semanticIds:
         - https://admin-shell.io/aas/API/PostSubmodelElementByPath/1/0/RC03c
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
         - name: idShortPath
           in: path
           description: IdShort path to the submodel element (dot-separated)
@@ -796,7 +796,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         required: true
       responses:
         '201':
@@ -804,25 +804,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Submodel API
@@ -832,9 +832,9 @@ paths:
         - https://admin-shell.io/aas/API/PutSubmodelElementByPath/1/0/RC03
         - https://admin-shell.io/aas/API/SetSubmodelElementValueByPath/1/0/RC03
       parameters:
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Level'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Extent'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Level'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Extent'
         - name: idShortPath
           in: path
           description: IdShort path to the submodel element (dot-separated)
@@ -848,7 +848,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SubmodelElement'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SubmodelElement'
         required: true
       responses:
         '204':
@@ -858,19 +858,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Submodel API
@@ -895,13 +895,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel/submodel-elements/{idShortPath}/attachment:
     get:
       tags:
@@ -938,19 +938,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '405':
           description: Method not allowed - Download only valid for File submodel element
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Submodel API
@@ -991,25 +991,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
         '405':
           description: Method not allowed - Upload only valid for File submodel element
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
   /submodel/submodel-elements/{idShortPath}/invoke:
     post:
       tags:
@@ -1026,7 +1026,7 @@ paths:
           schema:
             type: boolean
             default: false
-        - $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/parameters/Content'
+        - $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/parameters/Content'
         - name: idShortPath
           in: path
           description: IdShort path to the submodel element (dot-separated), in this case an operation
@@ -1040,7 +1040,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/OperationRequest'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/OperationRequest'
         required: true
       responses:
         '200':
@@ -1048,31 +1048,31 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/OperationResult'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/OperationResult'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '405':
           description: Method not allowed - Invoke only valid for Operation submodel element
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel/submodel-elements/{idShortPath}/operation-results/{handleId}:
     get:
       tags:
@@ -1113,19 +1113,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/OperationResult'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/OperationResult'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /shell-descriptors:
     get:
       tags:
@@ -1142,7 +1142,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/AssetAdministrationShellDescriptor'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShellDescriptor'
           links:
             GetAssetAdministrationShellDescriptorById:
               operationId: GetAssetAdministrationShellDescriptorById
@@ -1162,7 +1162,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Asset Administration Shell Registry API
@@ -1175,7 +1175,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/AssetAdministrationShellDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShellDescriptor'
         required: true
       responses:
         '201':
@@ -1183,19 +1183,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/AssetAdministrationShellDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShellDescriptor'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /shell-descriptors/{aasIdentifier}:
     get:
       tags:
@@ -1220,19 +1220,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/AssetAdministrationShellDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShellDescriptor'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Asset Administration Shell Registry API
@@ -1255,7 +1255,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/AssetAdministrationShellDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/AssetAdministrationShellDescriptor'
         required: true
       responses:
         '204':
@@ -1265,19 +1265,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Asset Administration Shell Registry API
@@ -1303,13 +1303,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /shell-descriptors/{aasIdentifier}/submodel-descriptors:
     get:
       tags:
@@ -1336,19 +1336,19 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Asset Administration Shell Registry API
@@ -1371,7 +1371,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         required: true
       responses:
         '201':
@@ -1379,25 +1379,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}:
     get:
       tags:
@@ -1431,19 +1431,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Asset Administration Shell Registry API
@@ -1475,7 +1475,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         required: true
       responses:
         '204':
@@ -1485,19 +1485,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Asset Administration Shell Registry API
@@ -1532,13 +1532,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel-descriptors:
     get:
       tags:
@@ -1555,13 +1555,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Submodel Registry API
@@ -1574,7 +1574,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         required: true
       responses:
         '201':
@@ -1582,19 +1582,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /submodel-descriptors/{submodelIdentifier}:
     get:
       tags:
@@ -1619,19 +1619,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Submodel Registry API
@@ -1654,7 +1654,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/SubmodelDescriptor'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/SubmodelDescriptor'
         required: true
       responses:
         '204':
@@ -1664,19 +1664,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Submodel Registry API
@@ -1702,13 +1702,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /concept-descriptions:
     get:
       tags:
@@ -1755,13 +1755,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ConceptDescription'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ConceptDescription'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Concept Description Repository API
@@ -1774,7 +1774,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ConceptDescription'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ConceptDescription'
         required: true
       responses:
         '201':
@@ -1782,19 +1782,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ConceptDescription'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ConceptDescription'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /concept-descriptions/{cdIdentifier}:
     get:
       tags:
@@ -1819,19 +1819,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ConceptDescription'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ConceptDescription'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - Concept Description Repository API
@@ -1854,7 +1854,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/ConceptDescription'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/ConceptDescription'
         required: true
       responses:
         '204':
@@ -1864,19 +1864,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - Concept Description Repository API
@@ -1902,13 +1902,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /packages:
     get:
       tags:
@@ -1935,13 +1935,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/PackageDescription'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/PackageDescription'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - AASX File Server API
@@ -1975,19 +1975,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/PackageDescription'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/PackageDescription'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /packages/{packageId}:
     get:
       tags:
@@ -2024,13 +2024,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     put:
       tags:
         - AASX File Server API
@@ -2076,19 +2076,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result' 
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result' 
     delete:
       tags:
         - AASX File Server API
@@ -2114,13 +2114,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /serialization:
     get:
       tags:
@@ -2172,16 +2172,16 @@ paths:
                 format: binary
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Environment'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Environment'
             application/xml:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/Environment'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/Environment'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /lookup/shells:
     get:
       tags:
@@ -2200,7 +2200,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId'
+              $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId'
             example: '[ { "name": "some-asset-id", "value": "http://example-company.com/myAsset", "externalSubjectId": { "keys": [ { "type": "GlobalReference", "value": "http://example-company.com/example-companys-asset-keys" } ], "type": "GlobalReference" } }, { "name": "some-other-asset-id", "value": "12345ABC", "externalSubjectId": { "keys": [ { "type": "GlobalReference", "value": "http://my-own-company.com/keys" } ], "type": "GlobalReference" } } ]e": "globalAssetId","value": "http://example.company/myAsset", "externalSubjectId": "http://example.company"},{"name": "myOwnInternalAssetId","value": "12345ABC", "externalSubjectId": "http://example.company"}]'
       responses:
         '200':
@@ -2235,7 +2235,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /lookup/shells/{aasIdentifier}:
     get:
       tags:
@@ -2262,19 +2262,19 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     post:
       tags:
         - Asset Administration Shell Basic Discovery API
@@ -2299,7 +2299,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId'
         required: true
       responses:
         '201':
@@ -2309,25 +2309,25 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0RC02#/components/schemas/SpecificAssetId'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part1-API-Schemas/openapi.yaml#/components/schemas/SpecificAssetId'
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
     delete:
       tags:
         - Asset Administration Shell Basic Discovery API
@@ -2353,13 +2353,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'      
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'      
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
   /descriptor:
     get:
       tags:
@@ -2376,10 +2376,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Descriptor'
+                  $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Descriptor'
         default:
           description: Default error handling for unmentioned status codes
           content:
             application/json:
               schema:
-                $ref: 'https://api.swaggerhub.com/domains/Plattform_i40/Part2-API-Schemas/V1.0RC03#/components/schemas/Result'
+                $ref: 'https://raw.githubusercontent.com/sap-contributions/aas-apis/main/Part2-API-Schemas/openapi.yaml#/components/schemas/Result'
