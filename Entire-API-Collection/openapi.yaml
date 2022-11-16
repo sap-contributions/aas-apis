@@ -927,7 +927,9 @@ paths:
               schema:
                 type: string
               description: In order to physically download the file usually set to attachment with a filename
-              example: 'attachment; filename="filename.jpg"'   
+              examples: 
+                filename:
+                  value: 'attachment; filename="filename.jpg"'   
           content:
             application/octet-stream:
               schema:

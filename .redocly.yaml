@@ -1,0 +1,41 @@
+
+organization: testing_redocly
+
+extends:
+  - recommended
+
+apis:
+  entire:
+    root: ./Entire-API-Collection/openapi.yaml
+    rules:
+      security-defined: off
+      operation-4xx-response: off
+      info-license: off
+      no-empty-servers: off
+      no-unresolved-refs: off
+  Part1:
+    root: ./Part1-MetaModel-Schemas/openapi.yaml
+    rules:
+      no-unused-components: off
+      security-defined: off
+      operation-4xx-response: off
+      info-license: off
+      no-empty-servers: off
+      no-unresolved-refs: off
+  Part2:
+    root: ./Part2-API-Schemas/openapi.yaml
+    rules:
+      no-unused-components: off
+      security-defined: off
+      operation-4xx-response: off
+      info-license: off
+      no-empty-servers: off
+      no-unresolved-refs: off
+    
+
+features.openapi:
+  schemaExpansionLevel: 2
+  #generateCodeSamples:
+  #  languages:
+  #    - lang: curl
+  #    - lang: Python
